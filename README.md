@@ -27,11 +27,6 @@ O objetivo deste projeto é criar um site com navegação intuitiva, usando boas
   contato.html
   ```
 
-## 🖼️ Capturas de Tela  
-_(Você pode substituir pelas suas próprias capturas)_  
-![Tela inicial](img/the‑witcher‑3.png)  
-![Menu mobile](img/portal‑dos‑games‑logo.png)  
-
 ## 📂 Estrutura do Projeto  
 | Arquivo/Pasta       | Função                                                                 |
 |---------------------|------------------------------------------------------------------------|
@@ -69,3 +64,4 @@ Este projeto está licenciado sob a licença MIT. Sinta‑se livre para **usar, 
 ---
 
 Feito por **Lucas Plopess** — Boa sorte com o desenvolvimento e bons estudos!
+
