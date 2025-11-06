@@ -59,9 +59,6 @@ O objetivo deste projeto é criar um site com navegação intuitiva, usando boas
 - Usar um sistema de templates ou componentes para reduzir repetição de código entre páginas.
 
 ## 📄 Licença  
-Este projeto está licenciado sob a licença MIT. Sinta‑se livre para **usar, modificar e distribuir** conforme seus próprios estudos ou projetos.
+Este projeto foi desenvolvido como parte de um **trabalho acadêmico** do curso de **Análise e Desenvolvimento de Sistemas**, com o objetivo de praticar conceitos de **HTML, CSS e JavaScript** aplicados à criação de sites.  
 
----
-
-Feito por **Lucas Plopess** — Boa sorte com o desenvolvimento e bons estudos!
-
+O código pode ser utilizado livremente para fins educacionais e de aprendizado.
