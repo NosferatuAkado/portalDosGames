@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/portal dos games logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styleglobal.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Portal dos Games</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/portal dos games logo.png" alt="Portal dos Games">
+        </div>
+
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="rpg.html">RPG</a></li>
+            <li><a href="fps.html">FPS</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <header class="banner" id="banner">
+            <h1>BEM VINDO AO PORTAL DOS GAMES</h1>
+            <p>Fique por dentro dos últimos lançamentos, acompanhe notícias e descubra novos mundos RPG e FPS.</p>
+            <a href="#generos" class="generosbotao">Descubra os Gêneros</a>
+        </header>
+
+        <section id="noticias">
+            <h2>Últimas Notícias</h2>
+
+            <div class="noticias-destaque">
+                <div class="noticia">
+                    <img src="img/gta6.png" alt="Notícia GTA VI">
+                    <div class="conteudo-destaque">
+                        <h3>GTA VI foi adiado novamente</h3>
+                        <p>A Take-Two Interactive confirmou que GTA VI agora tem lançamento previsto para 19 de novembro de 2026.</p>
+                        <a href="noticias/noticiagta6.html" class="noticiabotao">Leia mais</a>
+                    </div>
+                </div>
+
+                <div class="noticia">
+                    <img src="img/blackops7.jpg" alt="Notícia Call of Duty">
+                    <div class="conteudo-destaque">
+                        <h3>Call of Duty: Black Ops 7 estreia no Game Pass</h3>
+                        <p>Call of Duty: Black Ops 7 está sendo lançado essa semana (10-16 de novembro) e já estará disponível no Xbox Game Pass Ultimate e no PC Game Pass desde o primeiro dia.</p>
+                        <a href="noticias/noticiacodops7.html" class="noticiabotao">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="generos" class="card-section">
+            <h2 class="titulo-secao fade-in-section">Gêneros</h2>
+
+            <div class="card fade-in-section">
+                <img src="img/the-witcher-3.png" alt="Capa RPG">
+                <h2>RPG / Aventura</h2>
+                <p>Mundos imersivos, narrativas envolventes e progressão épica de personagem.</p>
+                <a href="rpg.html" class="cardboton">Ver mais</a>
+            </div>
+
+            <div class="card fade-in-section">
+                <img src="img/codwarzone.png" alt="Capa FPS">
+                <h2>FPS Realista</h2>
+                <p>Competição intensa, precisão e muita adrenalina nos jogos de tiro em primeira pessoa.</p>
+                <a href="fps.html" class="cardboton">Ver mais</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="apresentacao fade-in-section">
+            <h1>SOBRE O PORTAL</h1>
+            <p>
+                O Portal dos Games é um espaço criado para reunir tudo o que envolve o universo dos videogames. Aqui, você encontra conteúdo dedicado aos principais gêneros — como RPGs inovadores e FPS competitivos — além de análises, notícias e guias pensados para jogadores de todos os níveis.
+
+                Nosso objetivo é oferecer informações claras, atualizadas e envolventes, explorando o que torna cada jogo especial: suas mecânicas, histórias, personagens e impacto na comunidade gamer. Trabalhamos para ajudar você a descobrir novos títulos, entender tendências e aproveitar ao máximo sua experiência de jogo.
+
+                Mais do que um portal de conteúdo, somos um ponto de encontro para quem vive e ama o mundo dos games.
+            </p>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="contato.html">Suporte</a>  &middot;
+                <a href="#banner">Info</a>
+            </div>
+            <p>&copy; 2025 — Portal dos Games</p>
+        </footer>    
+    </main>
+
+    <script src="js/mobile-navbar.js"></script>
+    <script src="js/fadeinsection.js"></script>
+</body>
+</html>
