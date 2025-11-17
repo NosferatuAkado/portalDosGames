@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/portal dos games logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/portal dos games logo.png" type="logo">
     <link rel="stylesheet" href="./css/styleglobal.css">
+    <link rel="stylesheet" href="./css/style-produtos.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Portal dos Games</title>
+    <title>Produtos — Portal dos Games</title>
 </head>
 <body>
     <nav>
@@ -29,21 +30,82 @@
         </ul>
     </nav>
 
-    <main>
-        
+    <main class="produtos-container fade-in-section">
+        <section class="produtos-header">
+            <h1 class="produtos-titulo">Nossos Produtos</h1>
+            <p>Ajude a manter nosso trabalho vivo! Se você curte o Portal dos Games, confira nossos produtos exclusivos.</p>
+        </section>
+
+        <section class="produtos-grid">
+
+            <div class="produto-card">
+                <img src="img/mousepad.jpg" alt="Mousepad PortalDosGames">
+                <h2>Mousepad Gamer</h2> 
+                <p>Mousepad oficial com estampa neon exclusiva. Ideal para setups gamers.</p>
+
+                <p class="preco">R$ 39,90</p>
+
+                <button class="botao-produto adicionar-carrinho"
+                        data-id="1"
+                        data-nome="Mousepad Gamer — Portal dos Games"
+                        data-preco="39.90"
+                        data-img="img/mousepad.jpg">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+
+            <div class="produto-card">
+                <img src="img/assinatura.jpg" alt="Assinatura">
+                <h2>Assinatura Premium</h2>
+                <p>Receba notícias antecipadas, análises especiais e conteúdos exclusivos por email.</p>
+
+                <p class="preco">R$ 14,90 / mês</p> 
+
+                <button class="botao-produto adicionar-carrinho"
+                        data-id="2"
+                        data-nome="Assinatura Premium"
+                        data-preco="14.90"
+                        data-img="img/newsletter.jpg">
+                    Assinar
+                </button>
+            </div>
+
+        </section>
     </main>
-
-
 
     <footer>
         <div class="footer-links">
-             <a href="contato.html">Suporte</a>  &middot;
+            <a href="contato.html">Suporte</a>  &middot;
             <a href="index.html#banner">Info</a>
         </div>
-         <p>&copy; 2025 — Portal dos Games</p>
-    </footer>     
+        <p>&copy; 2025 — Portal dos Games</p>
+    </footer>
 
 
+    <div id="carrinho-flutuante">
+        🛒 <span id="contador-carrinho">0</span>
+    </div>
+
+    <div id="carrinho-overlay"></div>
+
+    <div id="carrinho-lateral">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button id="fechar-carrinho">X</button>
+        </div>
+
+        <div id="carrinho-itens">
+            <p class="carrinho-vazio">Seu carrinho está vazio 😢</p>
+        </div>
+
+        <div class="carrinho-footer">
+            <p>Total: <span id="carrinho-total">R$ 0,00</span></p>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="js/carrinho.js"></script>
     <script src="js/mobile-navbar.js"></script>
+    <script src="js/fadeinsection.js"></script>
 </body>
 </html>
