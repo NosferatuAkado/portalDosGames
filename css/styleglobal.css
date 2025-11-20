@@ -1,13 +1,13 @@
-/* ./css/styleglobal.css - TEMA RPG HÍBRIDO (GÓTICO + NEON) */
+/* ./css/styleglobal.css - TEMA RPG HÍBRIDO (GÓTICO + PÚRPURA) */
 
 :root {
     /* Cores de Fundo (Gótico/Medieval Sombrio) */
     --cor-fundo-principal: #0a0a0c; 
     --cor-fundo-elemento: #1c1c24; 
     
-    /* Cores de Destaque (Ciberpunk/Magia Neon) */
-    --cor-destaque-neon: #00f8ff; /* Plasma Teal */
-    --cor-destaque-suave: #223c5e; /* Azul Escuro Mágico/Ciber */
+    /* Cores de Destaque (ROXAS ORIGINAIS DO SITE) */
+    --cor-destaque-neon: #b560ff; 
+    --cor-destaque-suave: #a259f7; 
     
     /* Cores de Texto */
     --cor-texto-claro: #f0f0f0; 
@@ -30,7 +30,6 @@ body {
     color: var(--cor-texto-claro);
     font-family: var(--fonte-corpo);
     line-height: 1.7; 
-    /* Efeito de textura sutil */
     background-image: radial-gradient(circle at center, #1c1c24 0%, #0a0a0c 100%);
     background-attachment: fixed;
 }
@@ -44,7 +43,6 @@ nav {
     background-color: var(--cor-fundo-elemento);
     padding: 0 5%;
     height: 10vh; 
-    /* Borda com gradiente temático */
     border-image: linear-gradient(to right, var(--cor-destaque-suave) 0%, var(--cor-destaque-neon) 50%, var(--cor-destaque-suave) 100%) 1;
     border-bottom-width: 2px;
     border-bottom-style: solid;
@@ -74,7 +72,6 @@ nav {
     transition: all 0.3s ease-in-out; 
 }
 
-/* Efeito de linha animada para o hover e link ativo */
 .nav-list a::after {
     content: '';
     position: absolute;
