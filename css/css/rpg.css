@@ -1,0 +1,173 @@
+/* ./css/rpg.css - ESTILO ESPECÍFICO DA NOTÍCIA */
+
+/* ------------------ Layout Principal da Notícia (CARD GÓTICO) ------------------ */
+
+/* CORRIGIDO: Adicionado 'body' para aumentar a especificidade e garantir que seus estilos funcionem */
+body .noticia-completa {
+    max-width: 950px; 
+    margin: 50px auto; 
+    padding: 30px; 
+    
+    background-color: var(--cor-fundo-elemento);
+    border: 1px solid var(--cor-destaque-suave);
+    border-radius: 15px; 
+    /* Sombra e brilho sutil para profundidade */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 248, 255, 0.15); 
+}
+
+/* Título Principal (ÉPICO/NEON) */
+body .titulo-noticia { /* CORRIGIDO: Adicionado 'body' */
+    font-family: var(--fonte-titulo);
+    color: var(--cor-destaque-neon);
+    font-size: 3.8rem;
+    text-align: center;
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 18px rgba(0, 248, 255, 0.8), 0 0 5px rgba(0, 248, 255, 0.4); 
+    letter-spacing: 3px; 
+    padding-bottom: 20px;
+    border-bottom: 3px double var(--cor-destaque-suave); /* Linha dupla clássica */
+}
+
+body .data-e-autor { /* CORRIGIDO: Adicionado 'body' */
+    text-align: center;
+    color: var(--cor-texto-suave);
+    font-size: 1rem;
+    margin-bottom: 50px;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+/* Subtítulos (UI/INTERFACE CIBERPUNK) */
+body .texto-noticia h2 { /* CORRIGIDO: Adicionado 'body' */
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-claro);
+    font-size: 2.2rem;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    
+    border-left: 5px solid var(--cor-destaque-neon); /* Barra de destaque lateral */
+    background-color: rgba(255, 255, 255, 0.05); 
+    text-shadow: 0 0 10px rgba(0, 248, 255, 0.3);
+}
+
+body .texto-noticia p { /* CORRIGIDO: Adicionado 'body' */
+    font-size: 1.15rem; 
+    color: var(--cor-texto-claro);
+    text-align: justify;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    /* CORREÇÃO: Garante o espaçamento normal das palavras, evitando o esticamento excessivo */
+    word-spacing: normal; 
+}
+
+/* ------------------ Padronização e Estilo das Imagens ------------------ */
+
+/* Imagem Principal */
+body .imagem-noticia-principal img { /* CORRIGIDO: Adicionado 'body' */
+    width: 100%; 
+    height: 450px; /* Altura máxima em desktop */
+    object-fit: cover; 
+    border: 3px solid var(--cor-destaque-suave); 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Imagens Secundárias (CARD ARTEFATO/DADO) */
+body .link-noticia-secundaria { /* CORRIGIDO: Adicionado 'body' */
+    float: right;
+    width: 40%; 
+    margin: 0 0 35px 35px; 
+    background-color: var(--cor-fundo-principal); 
+    padding: 15px; 
+    border-radius: 5px; 
+    border: 1px solid var(--cor-destaque-suave); 
+    box-shadow: 0 0 10px rgba(0, 248, 255, 0.3), 0 5px 15px rgba(0, 0, 0, 0.9); 
+    transition: all 0.4s ease-in-out; 
+}
+
+body .link-noticia-secundaria:hover { /* CORRIGIDO: Adicionado 'body' */
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 248, 255, 0.6), 0 15px 40px rgba(0, 0, 0, 0.9); 
+}
+
+body .link-noticia-secundaria img { /* CORRIGIDO: Adicionado 'body' */
+    width: 100%;
+    height: 200px; /* Altura consistente em desktop */
+    object-fit: cover;
+    border-radius: 0;
+    border: 1px solid var(--cor-destaque-suave);
+    filter: grayscale(20%); 
+    transition: filter 0.4s;
+}
+
+body .link-noticia-secundaria:hover img { /* CORRIGIDO: Adicionado 'body' */
+    filter: grayscale(0%);
+}
+
+body figcaption { /* CORRIGIDO: Adicionado 'body' */
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    padding-top: 10px;
+    border-top: 1px dashed var(--cor-destaque-suave); 
+    margin-top: 5px;
+}
+
+/* Garante que o texto volte ao fluxo normal após o float */
+.texto-noticia:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+
+@media (max-width: 768px) {
+    
+    body .titulo-noticia { /* CORRIGIDO: Adicionado 'body' */
+        font-size: 2rem; 
+        letter-spacing: 1px;
+        text-shadow: none; 
+        padding-bottom: 10px;
+    }
+
+    body .noticia-completa { /* CORRIGIDO: Adicionado 'body' */
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 0; 
+        box-shadow: none;
+    }
+
+    /* Redução da altura da Imagem Principal */
+    body .imagem-noticia-principal img { /* CORRIGIDO: Adicionado 'body' */
+        height: 300px; 
+        border-radius: 0;
+    }
+
+    /* Imagens Secundárias (Desativa Float e ocupa 100% da largura) */
+    body .link-noticia-secundaria { /* CORRIGIDO: Adicionado 'body' */
+        float: none; 
+        width: 100%; 
+        margin: 30px 0; 
+        padding: 10px;
+        transform: none !important; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    }
+
+    body .link-noticia-secundaria img { /* CORRIGIDO: Adicionado 'body' */
+        height: 220px; 
+    }
+
+    /* Ajuste de Espaçamento do Conteúdo */
+    body .texto-noticia h2 { /* CORRIGIDO: Adicionado 'body' */
+        font-size: 1.6rem;
+        margin-top: 30px;
+    }
+
+    body .texto-noticia p { /* CORRIGIDO: Adicionado 'body' */
+        padding: 0;
+    }
+}

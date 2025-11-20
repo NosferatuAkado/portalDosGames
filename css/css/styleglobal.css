@@ -1,0 +1,129 @@
+/* ./css/styleglobal.css - TEMA RPG HÍBRIDO (GÓTICO + NEON) */
+
+:root {
+    /* Cores de Fundo (Gótico/Medieval Sombrio) */
+    --cor-fundo-principal: #0a0a0c; 
+    --cor-fundo-elemento: #1c1c24; 
+    
+    /* Cores de Destaque (Ciberpunk/Magia Neon) */
+    --cor-destaque-neon: #00f8ff; /* Plasma Teal */
+    --cor-destaque-suave: #223c5e; /* Azul Escuro Mágico/Ciber */
+    
+    /* Cores de Texto */
+    --cor-texto-claro: #f0f0f0; 
+    --cor-texto-suave: #b0b0b0; 
+    
+    /* Fontes */
+    --fonte-titulo: 'Orbitron', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+/* Reset básico e tipografia */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-corpo);
+    line-height: 1.7; 
+    /* Efeito de textura sutil */
+    background-image: radial-gradient(circle at center, #1c1c24 0%, #0a0a0c 100%);
+    background-attachment: fixed;
+}
+
+/* ------------------ Navegação ------------------ */
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--cor-fundo-elemento);
+    padding: 0 5%;
+    height: 10vh; 
+    /* Borda com gradiente temático */
+    border-image: linear-gradient(to right, var(--cor-destaque-suave) 0%, var(--cor-destaque-neon) 50%, var(--cor-destaque-suave) 100%) 1;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.logo img {
+    width: 60px; 
+    height: 60px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 15px;
+    position: relative; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Efeito de linha animada para o hover e link ativo */
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 0%; 
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor-destaque-neon);
+    transition: width 0.3s ease-in-out; 
+}
+
+.nav-list a:hover::after,
+.nav-list a[aria-current="page"]::after {
+    width: 100%; 
+}
+
+.nav-list a[aria-current="page"] {
+    color: var(--cor-destaque-neon);
+}
+
+
+/* ------------------ Footer ------------------ */
+
+footer {
+    background-color: var(--cor-fundo-elemento);
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 2px solid var(--cor-destaque-suave);
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--cor-texto-suave);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--cor-destaque-neon);
+}
+
+/* ------------------ Responsividade Base ------------------ */
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
