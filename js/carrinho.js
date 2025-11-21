@@ -108,7 +108,6 @@ function adicionarAoCarrinho(nome, preco) {
         const jaAssinado = carrinho.some(item => item.nome.includes("Assinatura Premium"));
 
         if (jaAssinado) {
-            alert("A Assinatura Premium já está no seu carrinho. Limite de 1 por cliente.");
             return;
         }
 
@@ -172,15 +171,31 @@ document.getElementById("carrinho-overlay").onclick = fecharCarrinho;
 
 document.getElementById("finalizar-compra").addEventListener("click", () => {
     const totalCompra = calcularTotal();
+
     if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio! Adicione alguns produtos antes de finalizar.");
+        const itensHTML = document.getElementById("carrinho-itens");
+        itensHTML.innerHTML = `<p class="carrinho-vazio" style="color: red;">Adicione itens antes de finalizar!</p>`;
         return;
     }
-    alert(`Obrigado pela compra! Total: ${formatarMoeda(totalCompra)}`); 
 
-    carrinho = [];
-    atualizarCarrinho();
-    fecharCarrinho();
+    const btnFinalizar = document.getElementById("finalizar-compra");
+    btnFinalizar.style.display = "none";
+
+    const itensHTML = document.getElementById("carrinho-itens");
+    const totalFormatado = formatarMoeda(totalCompra);
+    
+    itensHTML.innerHTML = `
+        <div class="compra-sucesso" style="text-align: center; padding: 20px;">
+            <h3 style="color: green;">Valeu pelo apoio! 🎮</h3>
+            <p>Você ajuda a manter o Portal vivo.</p>
+            <p><strong>Total: ${totalFormatado}</strong></p>
+        </div>
+    `;
+
+    setTimeout(() => {
+        carrinho = []; 
+        atualizarCarrinho(); 
+        fecharCarrinho(); 
+        btnFinalizar.style.display = "block"; 
+    }, 4000);
 });
-
-atualizarCarrinho();
